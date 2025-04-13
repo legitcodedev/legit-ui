@@ -19,15 +19,15 @@ Update `src/routes/+layout.svelte` file:
 
 ```svelte
 <script lang="ts">
-  import { UiProvider } from 'legit-ui';
+  import { Provider } from 'legit-ui';
   import 'legit-ui/styles.css';
 
   let { children } = $props();
 </script>
 
-<UiProvider>
+<Provider>
   {@render children()}
-</UiProvider>
+</Provider>
 ```
 
 That's it! You're now ready to build with Legit UI.
