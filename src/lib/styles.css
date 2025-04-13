@@ -1,21 +1,25 @@
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 @source './components';
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root {
 	--background: var(--color-white);
+	--background-muted: var(--color-neutral-200);
 	--foreground: var(--color-neutral-900);
 	--foreground-muted: var(--color-neutral-600);
 }
 
 html[data-theme='dark'] {
 	--background: var(--color-neutral-900);
+	--background-muted: var(--color-neutral-800);
 	--foreground: var(--color-neutral-200);
 	--foreground-muted: var(--color-neutral-400);
 }
 
 @theme {
 	--color-background: var(--background);
+	--color-background-muted: var(--background-muted);
 	--color-foreground: var(--foreground);
 	--color-foreground-muted: var(--foreground-muted);
 
@@ -30,4 +34,8 @@ html[data-theme='dark'] {
 body {
 	background-color: var(--color-background);
 	color: var(--color-foreground);
+}
+
+.prose pre code {
+	background-color: inherit !important;
 }

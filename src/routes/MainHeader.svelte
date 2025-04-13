@@ -4,7 +4,7 @@
 	const links = [
 		{
 			text: 'Getting started',
-			href: '/'
+			href: '/docs/getting-started'
 		},
 		{
 			text: 'Components',
